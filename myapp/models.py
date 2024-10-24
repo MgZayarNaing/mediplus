@@ -7,5 +7,5 @@ class ImagesliderModel(models.Model):
     image = models.ImageField(upload_to='imageslider')
     desc =  models.TextField()
 
-    def str (self):
+    def __str__ (self):
         return self.title
