@@ -4,3 +4,4 @@ from .models import *
 admin.site.register(ImagesliderModel)
 admin.site.register(EmergencyCasesModel)
 admin.site.register(OpeningHoursModel)
+admin.site.register(ExpModel)

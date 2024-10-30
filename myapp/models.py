@@ -24,3 +24,12 @@ class OpeningHoursModel(models.Model):
     def  __str__(self):
         return self.day
 
+class ExpModel(models.Model):
+    total_exp = models.CharField(max_length=100)
+    desc = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.total_exp
+
+
+
