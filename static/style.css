@@ -846,7 +846,7 @@ body{
 	padding:10px 20px;
 }
 .Feautes .single-features::before {
-	position: absolute;
+	/* position: absolute; */
 	content: "";
 	right: -72px;
 	top: 60px;
@@ -882,7 +882,7 @@ body{
 	border-color:transparent;
 }
 .Feautes .single-features h3{
-	padding-top: 128px;
+	padding-top: 20px;
 	color:#2C2D3F;
 	font-weight:600;
 	font-size:21px;
@@ -4170,3 +4170,10 @@ body{
 /*=========================
 	End Footer CSS
 ===========================*/
+
+
+.feature1 {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
