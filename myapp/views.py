@@ -10,6 +10,7 @@ def Home(request):
     feature = FeatureModel.objects.all().order_by('-id')[:3]
     whoweare = WhoWeAreModel.objects.all().order_by('-id')[:1]
     whowearelist = WhoWeAreListModel.objects.all().order_by('-id')[:4]
+    whowearevideo = WhoWeAreVideoModel.objects.all().order_by('-id')[:1]
 
     contex  = {
     'imageslider':imageslider,
@@ -19,5 +20,6 @@ def Home(request):
     'feature':feature,
     'whoweare':whoweare,
     'whowearelist':whowearelist,
+    'whowearevideo':whowearevideo,
     }
     return render(request,'index.html',contex )

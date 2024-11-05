@@ -6,7 +6,7 @@
 <section class="slider">
     <div class="hero-slider">
         <!-- Start Single Slider -->
-         {% for img in imageslider %}
+        {% for img in imageslider %}
         <div class="single-slider" style="background-image:url({{ img.image.url }});">
             <div class="container">
                 <div class="row">
@@ -24,7 +24,7 @@
             </div>
         </div>
         {% endfor %}
-        
+
     </div>
 </section>
 <!--/ End Slider Area -->
@@ -42,19 +42,19 @@
                             <div class="icon">
                                 <i class="fa fa-ambulance"></i>
                             </div>
-                           
+
                             <div class="single-content">
                                 <span>Lorem Amet</span>
                                 <h4>{{i.title}}</h4>
                                 <p>{{i.desc}}</p>
                                 <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
                 {% endfor %}
-                
+
                 <div class="col-lg-4 col-md-12 col-12">
                     <!-- single-schedule -->
                     <div class="single-schedule last">
@@ -94,14 +94,14 @@
             </div>
         </div>
         <div class="row">
-            {% for i in  feature %}
+            {% for i in feature %}
             <div class="col-lg-4 col-12">
 
                 <!-- Start Single features -->
                 <div class="single-features">
                     <div class="signle-icon">
                         <!-- <i class="icofont icofont-ambulance-cross"></i> -->
-                        <img class="feature1"  src="{{i.img.url}}" alt="{{i.title}}">
+                        <img class="feature1" src="{{i.img.url}}" alt="{{i.title}}">
                     </div>
                     <h3>{{i.title}}</h3>
                     <p>{{i.desc}}</p>
@@ -109,8 +109,8 @@
                 <!-- End Single features -->
             </div>
             {% endfor %}
-           
-            
+
+
         </div>
     </div>
 </section>
@@ -140,7 +140,7 @@
 <!--/ End Fun-facts -->
 
 <!-- Start Why choose -->
-<section class="why-choose section" >
+<section class="why-choose section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -166,36 +166,47 @@
 
                                 {% for i in whowearelist %}
                                 <li><i class="fa fa-caret-right"></i>{{i.text}}</li>
-                                {%  endfor %}
+                                {% endfor %}
 
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- End Choose Left -->
             </div>
             <div class="col-lg-6 col-12">
                 <!-- Start Choose Rights -->
-                <div class="choose-right">
-                    <div class="video-image">
-                        <!-- Video Animation -->
-                        <div class="promo-video">
-                            <div class="waves-block">
-                                <div class="waves wave-1"></div>
-                                <div class="waves wave-2"></div>
-                                <div class="waves wave-3"></div>
-                            </div>
-                        </div>
-                        <!--/ End Video Animation -->
-                        <a href="https://www.youtube.com/watch?v=RFVXy6CRVR4" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
-                    </div>
-                </div>
+                {% for i in whowearevideo %}
+                <video controls loop   autoplay width="400px" height="300px">
+                    <source src="{{ i.video.url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                {% endfor %}
                 <!-- End Choose Rights -->
             </div>
         </div>
     </div>
 </section>
 <!--/ End Why choose -->
+
+<!-- Start Call to action -->
+<section class="call-action overlay" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="content">
+                    <h2>Do you need Emergency Medical Care? Call @ 1234 56789</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dictum turpis nec gravida.</p>
+                    <div class="button">
+                        <a href="#" class="btn">Contact Now</a>
+                        <a href="#" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Call to action -->
 
 {% endblock %}
