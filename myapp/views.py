@@ -8,6 +8,8 @@ def Home(request):
     openhours = OpeningHoursModel.objects.all().order_by('-id')[:2]
     exp = ExpModel.objects.all().order_by('-id')[:4]
     feature = FeatureModel.objects.all().order_by('-id')[:3]
+    whoweare = WhoWeAreModel.objects.all().order_by('-id')[:1]
+    whowearelist = WhoWeAreListModel.objects.all().order_by('-id')[:4]
 
     contex  = {
     'imageslider':imageslider,
@@ -15,5 +17,7 @@ def Home(request):
     'openhours':openhours,
     'exp':exp,
     'feature':feature,
+    'whoweare':whoweare,
+    'whowearelist':whowearelist,
     }
     return render(request,'index.html',contex )

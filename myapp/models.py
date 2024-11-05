@@ -39,6 +39,17 @@ class FeatureModel(models.Model):
     def  __str__(self):
         return self.title
 
+class WhoWeAreModel(models.Model):
+    title = models.CharField(max_length=200)
+    desc1 = models.TextField()
+    desc2 = models.TextField()
 
+    def  __str__(self):
+        return self.title
 
+class WhoWeAreListModel(models.Model):
+    text = models.CharField(max_length=200)
+
+    def   __str__(self):
+        return self.text
 
