@@ -3,7 +3,7 @@ from myapp.models import *
 # Create your views here.
 
 def Dashboard(request):
-    imageslider = ImagesliderModel.objects.all()
+    imageslider = ImagesliderModel.objects.count()
     contex = {
         'imageslider': imageslider
     }
