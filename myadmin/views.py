@@ -8,3 +8,10 @@ def Dashboard(request):
         'imageslider': imageslider
     }
     return render(request, 'dashboard.html', contex)
+
+def ImagSliderList(request):
+    imagslider = ImagesliderModel.objects.all()
+    contex = {
+        'imagslider': imagslider
+        }
+    return render(request, 'imagsliderlist.html', contex)
