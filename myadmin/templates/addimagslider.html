@@ -1,0 +1,17 @@
+{% extends 'adminbase.html' %}
+{% block body %}
+{% load static %}
+
+<h1>Image slider create</h1>
+
+<form action="/myadmin/imageslidercreate/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="">Title</label>
+    <input type="text" name="title" placeholder="Enter title">
+    <label for="">Desc</label>
+    <input type="text" name="desc" placeholder="Enter Desc">
+    <input type="file" name="image">
+    <button type="submit">Create</button>
+</form>
+
+{% endblock %}

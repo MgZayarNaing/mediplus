@@ -2,6 +2,58 @@
 {% block body %}
 {% load static %}
 
-<h1>Image Slider List</h1>
-
+<div class="container-fluid py-4">
+<div class="row">
+    <div class="col-12">
+      <div class="card mb-4">
+        <div class="card-header pb-0">
+          <h6>Image Slider List</h6>
+        </div>
+        <a href="/myadmin/imageslidercreate/">Create</a>
+        <div class="card-body px-0 pt-0 pb-2">
+          <div class="table-responsive p-0">
+            <table class="table align-items-center mb-0">
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Title</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Image</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Desc</th>
+                  <th class="text-secondary opacity-7">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in imagslider %}
+                <tr>
+                  <td>
+                    <p class="text-xs font-weight-bold mb-0">{{i.title}}</p>
+                  </td>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        {% if i.image %}
+                        <img src="{{i.image.url}}" class="avatar avatar-sm me-3" alt="user1">
+                        {% else %}
+                        <img src="" alt="image">
+                        {% endif %}
+                      </div>
+                    </div>
+                  </td>
+                  <td class="align-middle text-center">
+                    <p class="text-xs font-weight-bold mb-0">{{i.desc}}</p>
+                  </td>
+                  <td class="align-middle">
+                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                      Edit
+                    </a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
